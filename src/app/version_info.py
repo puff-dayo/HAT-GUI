@@ -1,0 +1,2 @@
+APP_NAME = "HAT GUI"
+APP_VERSION = "1"

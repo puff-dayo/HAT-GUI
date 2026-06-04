@@ -1,0 +1,11 @@
+[project]
+name = "hat-gui"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "onnxruntime-directml>=1.24.4",
+    "opencv-python>=4.13.0.92",
+    "pyinstaller>=6.20.0",
+    "pyside6-essentials>=6.11.1",
+]
