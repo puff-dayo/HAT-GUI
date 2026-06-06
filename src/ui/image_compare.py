@@ -23,6 +23,13 @@ class ComparisonWidget(QWidget):
         self._output_image = qimg
         self.update()
 
+    def set_images(self, left: QImage, right: QImage, left_label: str = "", right_label: str = ""):
+        self._input_image = left
+        self._output_image = right
+        self._left_label = left_label
+        self._right_label = right_label
+        self.update()
+
     def set_split(self, fraction: float):
         self._split = max(0.0, min(1.0, fraction))
         self.update()
@@ -61,7 +68,7 @@ class ComparisonWidget(QWidget):
             painter.restore()
 
         line_x = img_rect.left() + self._split * img_rect.width()
-        pen = QPen(QColor(255, 255, 255), 2)
+        pen = QPen(QColor(255, 128, 128), 2)
         painter.setPen(pen)
         painter.drawLine(
             QPointF(line_x, img_rect.top()),
@@ -70,7 +77,7 @@ class ComparisonWidget(QWidget):
 
         handle_radius = 10
         handle_center = QPointF(line_x, img_rect.center().y())
-        painter.setBrush(QBrush(QColor(255, 255, 255)))
+        painter.setBrush(QBrush(QColor(255, 128, 128)))
         painter.drawEllipse(handle_center, handle_radius, handle_radius)
 
     def mousePressEvent(self, event):
