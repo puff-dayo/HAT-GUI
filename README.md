@@ -6,9 +6,7 @@ There is no need to download or configure Torch, cuDNN, or CUDA with this app. I
 
 Currently, it supports Real_HAT_GAN_SRx4 and Real_HAT_GAN_SRx4_sharper. **Real_HAT_GAN_SRx4** would have much better fidelity. Converted ONNX models and the convert script can be downloaded inside [/models](models) folder.
 
-
-
-![demo](assets/scrsht.png)
+[//]: # (![demo]&#40;assets/scrsht.png&#41;)
 
 ## Requirements
 
